@@ -1,6 +1,7 @@
 import { CORE_CONCEPTS } from "./data";
-import Header from "./components/Header";
-import CoreConcept from "./components/CoreConcept";
+import Header from "./components/Header/Header";
+import CoreConcept from "./components/CoreConcepts/CoreConcept";
+import TabButton from "./components/TabButton/TabButton";
 
 // function UserData(){
 //   const user = {first:"George", last:"Salayka", age: "40"};
@@ -22,25 +23,34 @@ function App() {
           <ul>
             <CoreConcept
               {
-                ...CORE_CONCEPTS[0]
+              ...CORE_CONCEPTS[0]
               }
             />
             <CoreConcept
               {
-                ...CORE_CONCEPTS[1]
+              ...CORE_CONCEPTS[1]
               }
             />
             <CoreConcept
               {
-                ...CORE_CONCEPTS[2]
+              ...CORE_CONCEPTS[2]
               }
             />
             <CoreConcept
               {
-                ...CORE_CONCEPTS[3]
+              ...CORE_CONCEPTS[3]
               }
             />
           </ul>
+        </section>
+        <section id="examples">
+          <h2>Examples</h2>
+          <menu>
+              <TabButton>Components</TabButton>
+              <TabButton>JSX</TabButton>
+              <TabButton>Props</TabButton>
+              <TabButton>State</TabButton>
+          </menu>
         </section>
       </main>
     </div>
